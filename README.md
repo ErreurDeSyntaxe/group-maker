@@ -88,26 +88,26 @@ Groups are randomly generated and displayed on screen
 
 ## Architecture
 
-class Group() {
+class Group {
 -constructor(number, nameList) {
 --this.number = number;
 --this.nameList = nameList;
 -}
 }
 
-class Teacher() {
+class Teacher {
 -constructor(name, groups) {
 --this.name = name;
 --this.groups = groups;
 -}
 }
 
-class App () {  
+class App {  
 -constructor() {  
 --this.init();  
 -}  
-}  
 -init() {
+-}  
 }
 
 ## Lessons & Difficulties
