@@ -60,4 +60,34 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--color-true-gray);
+  background-color: var(--color-main);
+  height: 100vh;
+}
+
+/* HEADER STYLING */
+.header-title {
+  color: var(--color-gray);
+  font-size: 6.8rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+/* HERO STYLING */
+.section-hero {
+  color: var(--color-gray);
+  font-size: 3rem;
+  padding: 2rem;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+.hero-text-box {
+  font-size: 2rem;
+}
+.hero img {
+  width: 25rem;
+  border-radius: 13px;
 }
