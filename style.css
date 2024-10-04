@@ -53,6 +53,7 @@ html {
   --color-main: #f2e5bf;
   --color-accent: #fd8b51;
   --color-support: #cb6040;
+  --color-gray: #257180;
 }
 body {
   font-family: 'Roboto', sans-serif;
