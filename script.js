@@ -128,7 +128,7 @@ class App {
     const teacherHTML = this.ESLteachers
       .map((teacher) => teacher.teacherName)
       .reduce((accu, pseudo) => accu + `<div>${pseudo}</div>`, '');
-    document.querySelector('.main').innerHTML = teacherHTML;
+    document.querySelector('.section-teachers').innerHTML = teacherHTML;
   }
 }
 
