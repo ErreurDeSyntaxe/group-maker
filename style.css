@@ -9,15 +9,19 @@
 
 /* COLORS */
 /* 
-Main:
+Main: #F2E5BF
 tints:
 shades:
 
-Grey: #555
+Grey: #257180
 tints:
 shades:
 
-Accent:
+Accent: #FD8B51
+tints:
+shades:
+
+Support: #CB6040
 tints:
 shades:
 */
@@ -45,11 +49,14 @@ html {
   font-size: 62.5%;
 }
 :root {
-  --color-gray: #555;
+  --color-true-gray: #555;
+  --color-main: #f2e5bf;
+  --color-accent: #fd8b51;
+  --color-support: #cb6040;
 }
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: var(--color-gray);
+  color: var(--color-true-gray);
 }
