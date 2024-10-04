@@ -34,7 +34,6 @@ shades:
   font-family: 'Roboto';
   src: url('./font/Roboto-Regular.ttf');
 }
-
 *,
 *::before,
 *::after {
@@ -42,14 +41,15 @@ shades:
   margin: 0;
   padding: 0;
 }
-
 html {
   font-size: 62.5%;
 }
-
+:root {
+  --color-gray: #555;
+}
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: var(--color-gray);
 }
