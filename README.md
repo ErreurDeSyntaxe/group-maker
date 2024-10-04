@@ -1,4 +1,4 @@
-# Simple Template
+# Group Maker
 
 A template for practice or simple projects (without webpack or ESlint)
 
@@ -16,7 +16,8 @@ A template for practice or simple projects (without webpack or ESlint)
 
 ### Objective
 
-The goal of the project is to learn xyz by building abc.
+The goal of the project is to build a quick and easy way to make random groups
+in class for presentations or teamwork.
 
 ###### Project Statement
 
@@ -24,10 +25,9 @@ The goal of the project is to learn xyz by building abc.
 
 ### Notable Features
 
-- Add something
-- Edit something
-- Remove something
-- Allow users to complicate dev's job
+- Select a class (7AA, 7CB, 8DA, 8FB...)
+- Select group size
+- Visually group the students together
 
 ## Built With
 
@@ -39,14 +39,17 @@ The goal of the project is to learn xyz by building abc.
 
 - [x] Understand the objectives
 - [ ] Plan
-  - [ ] User stories
-  - [ ] Features
-  - [ ] Flowchart
-  - [ ] Architecture
+  - [x] User stories
+  - [x] Features
+  - [x] Flowchart
+  - [x] Architecture
   - [ ] UI Design
   - [ ] Responsive Design
 - [ ] Development
   - [ ] Basic HTML
+  - [ ] Name Lists
+    - [ ] Teachers
+    - [ ] Teachers' Classes
   - [ ] Console-Based Logic
   - [ ] UI Features
     - [ ] UI Sketch
@@ -62,25 +65,49 @@ The goal of the project is to learn xyz by building abc.
 
 ## User Stories
 
-- As a user, I want...
+- As a teacher, I want to find the class I teach
+- As a teacher, I want to choose the group size (from 2 to 4)
+- As a teacher, I want 'extra' students to be groupe up with an existing group
+- As a teacher, I want a visual representation of the groups
+- As a teacher, I want to temporarily remove absentees from the process
+- As a teacher, I want the absentee list to be reset at every lesson
+- As a teacher, I want to go back if I missclicked
 
 ## Features
 
-- Users can...
+- Teachers select their "profile"
+- Teachers can remove individual students from the group-making process
+- Teachers can re-add students to the process
+- Teachers can request a new shuffling of students
 
 ## Flowchart
 
-Page Loads ->
+Page Loads -> "Which teacher are you?" -> "Which class are you teaching?" ->
+Possibility of removing/re-adding students -> Shuffle Button Pressed ->
+Groups are randomly generated and displayed on screen
 
 ## Architecture
+
+class Group() {
+-constructor(number, nameList) {
+--this.number = number;
+--this.nameList = nameList;
+-}
+}
+
+class Teacher() {
+-constructor(name, groups) {
+--this.name = name;
+--this.groups = groups;
+-}
+}
 
 class App () {  
 -constructor() {  
 --this.init();  
 -}  
 }  
--init() {  
---console.log('Hello, World!);  
+-init() {
 }
 
 ## Lessons & Difficulties
