@@ -82,14 +82,12 @@ body {
   height: 10rem;
   stroke: var(--color-true-gray);
 }
-.header-title {
+.header-text {
   font-size: 2rem;
 }
 
 /* HERO STYLING */
 .section-hero {
-  color: var(--color-gray);
-  font-size: 3rem;
 }
 .hero {
   display: grid;
@@ -103,19 +101,12 @@ body {
   align-items: center;
   gap: 3.2rem;
 }
-.heading {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 900;
-}
 .hero-description {
-  font-size: 2rem;
 }
 .hero-link-box {
 }
 .btn:link,
 .btn:visited {
-  font-size: 2rem;
   color: var(--color-support);
   text-decoration: none;
 
@@ -137,8 +128,6 @@ body {
 
 /* TEACHER SECTION STYLING */
 .section-teachers {
-}
-.teacher-header {
 }
 .teacher-card-container {
   display: grid;
