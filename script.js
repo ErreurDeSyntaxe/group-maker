@@ -203,17 +203,19 @@ class App {
     ];
 
     this.ESLteachers = [
-      new Teacher('AJ', '7AA'),
-      new Teacher('Mbali', '7FB'),
-      new Teacher('Rachel', '7BB'),
-      new Teacher('Xavier', '7AB', '7CB', '7FA', '8CB', '8BA', '8FB'),
+      new Teacher('AJ', '7AA', '8CA'),
+      new Teacher('Mbali', '7FB', '8FB'),
+      new Teacher('Rachel', '7BB', '7CA', '8BB'),
+      new Teacher('Xavier', '7AB', '7CB', '7FA', '8CB', '8BA', '8FA'),
     ];
 
+    this.displayTeacherCards(this.ESLteachers);
+    this.displayGroupCards(this.ESLgroups);
     // check the inner workings
-    this.logData();
+    // this.logData();
     // display the teachers' names in the DOM
-    this.displayTeacherNames();
-    this.displaySelectedTeacher();
+    // this.displayTeacherNames();
+    // this.displaySelectedTeacher();
   }
 
   // check inner workings
@@ -222,13 +224,38 @@ class App {
     console.log(this.ESLgroups);
   }
 
+  // Display teachers' names on the UI
+  displayTeacherCards(teachers) {
+    const teachersHTML = teachers
+      .map((teacher) => teacher.firstName)
+      .reduce(
+        (accu, pseudo) =>
+          accu +
+          `<div class="teacher-card teacher-${pseudo.toLowerCase()}">
+            <p class="teacher-name">${pseudo}</p>
+           </div>`,
+        ''
+      );
+
+    document.querySelector('.section-teachers').innerHTML = teachersHTML;
+  }
+
+  // Display the teachers' group on their respective cards
+  displayGroupCards(groups) {
+    groups.forEach((group) => {
+      document.querySelector(
+        `.teacher-${group.teacherName.toLowerCase()}`
+      ).innerHTML += `<div class="teacher-group">${group.id}</div>`;
+    });
+  }
+
   // displays all teacher names
   displayTeacherNames() {
     //prettier-ignore
     const teacherHTML = this.ESLteachers
       .map((teacher) => teacher.firstName)
       .reduce((accu, pseudo) => accu + `<div>${pseudo}</div>`, '');
-    document.querySelector('.section-teachers').innerHTML = teacherHTML;
+    // document.querySelector('.section-teachers').innerHTML = teacherHTML;
   }
 
   // display the groups' IDs and their students' names
