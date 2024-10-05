@@ -211,17 +211,6 @@ class App {
 
     this.displayTeacherCards(this.ESLteachers);
     this.displayGroupCards(this.ESLgroups);
-    // check the inner workings
-    // this.logData();
-    // display the teachers' names in the DOM
-    // this.displayTeacherNames();
-    // this.displaySelectedTeacher();
-  }
-
-  // check inner workings
-  logData() {
-    console.log(this.ESLteachers);
-    console.log(this.ESLgroups);
   }
 
   // Display teachers' names on the UI
@@ -256,28 +245,6 @@ class App {
       .map((teacher) => teacher.firstName)
       .reduce((accu, pseudo) => accu + `<div>${pseudo}</div>`, '');
     // document.querySelector('.section-teachers').innerHTML = teacherHTML;
-  }
-
-  // display the groups' IDs and their students' names
-  displayGroupNameList(selectedGroups) {
-    const groups = this.ESLgroups.filter((group) =>
-      selectedGroups.includes(group.id)
-    );
-    groups.forEach((group) => {
-      console.log(group.id);
-      console.log(group.nameList);
-    });
-  }
-
-  // diplay one teacher's groups
-  displaySelectedTeacher(selectedTeacher = 'Xavier') {
-    // prettier-ignore
-    const possibleGroups = this.ESLteachers
-    .filter((teacher) => teacher.firstName === selectedTeacher)[0]
-    .groupList;
-
-    console.log(possibleGroups);
-    this.displayGroupNameList(possibleGroups);
   }
 }
 
