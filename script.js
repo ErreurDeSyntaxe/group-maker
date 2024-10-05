@@ -2,7 +2,7 @@
 
 class Group {
   constructor(teacherName, id, nameList) {
-    this.teacher = teacherName;
+    this.teacherName = teacherName;
     this.id = id;
     this.nameList = nameList;
   }
@@ -10,8 +10,8 @@ class Group {
 
 class Teacher {
   constructor(firstName, ...groupList) {
-    this.teacherName = firstName;
-    this.teacherGroups = groupList;
+    this.firstName = firstName;
+    this.groupList = groupList;
   }
 }
 
@@ -38,6 +38,102 @@ class App {
         'Eric L',
         'Emily',
         'Jason H',
+      ]),
+      new Group('Xavier', '7CB', [
+        'Sunny C',
+        'Flora',
+        'Hannah',
+        'Findy',
+        'Cindy',
+        'Fanny',
+        'Sunny L',
+        'Xenia',
+        'Jessie',
+        'Tina',
+        'Michelle',
+        'Samuel',
+        'Elsa',
+        'Morris',
+        'Justin',
+        'Joshua',
+        'Bruce',
+      ]),
+      new Group('Xavier', '7FA', [
+        'Abby',
+        'Patty',
+        'Clair',
+        'Jessica',
+        'Willson',
+        'Ben',
+        'Luna',
+        'Miles',
+        'Angel',
+        'Ray',
+        'Justin',
+        'Ryder',
+        'Phoebe',
+        'Rowena',
+        'Brian',
+        'Evangeline',
+        'Cynthia',
+        'Sam',
+        'Sarah',
+        'Vivian',
+      ]),
+      new Group('Xavier', '8CB', [
+        'Yuri',
+        'Dora',
+        'Ray H',
+        'Terrisa',
+        'Johnny',
+        'Brandon',
+        'Sharon',
+        'Sunny',
+        'Meya',
+        'Eric',
+        'Ray C',
+        'Ian',
+        'Jimmy',
+        'Roy',
+      ]),
+      new Group('Xavier', '8BA', [
+        'Hardy',
+        'Bryan',
+        'Gary',
+        'Henry',
+        'Willy',
+        'Anderson',
+        'Cheney',
+        'Turner',
+        'Sage',
+        'Lesley',
+        'Patrina',
+        'Gina',
+        'Emily',
+        'Lulu',
+        'Gloria',
+        'Shanie',
+        'Kiki',
+        'Ariel',
+      ]),
+      new Group('Xavier', '8FB', [
+        'Anna',
+        'Joannie',
+        'Joanne',
+        'Charlotte',
+        'Stella',
+        'Judy',
+        'Jamie',
+        'Sharon',
+        'Wayne',
+        'Jason',
+        'Isaac',
+        'Ruby',
+        'Gordon',
+        'Una',
+        'Meghan',
+        'Leo',
+        'Ray',
       ]),
       new Group('Rachel', '7BB', [
         'Dylan',
@@ -110,25 +206,51 @@ class App {
       new Teacher('AJ', '7AA'),
       new Teacher('Mbali', '7FB'),
       new Teacher('Rachel', '7BB'),
-      new Teacher('Xavier', '7AB'),
+      new Teacher('Xavier', '7AB', '7CB', '7FA', '8CB', '8BA', '8FB'),
     ];
 
     // check the inner workings
     this.logData();
     // display the teachers' names in the DOM
     this.displayTeacherNames();
+    this.displaySelectedTeacher();
   }
+
+  // check inner workings
   logData() {
     console.log(this.ESLteachers);
     console.log(this.ESLgroups);
   }
 
+  // displays all teacher names
   displayTeacherNames() {
     //prettier-ignore
     const teacherHTML = this.ESLteachers
-      .map((teacher) => teacher.teacherName)
+      .map((teacher) => teacher.firstName)
       .reduce((accu, pseudo) => accu + `<div>${pseudo}</div>`, '');
     document.querySelector('.section-teachers').innerHTML = teacherHTML;
+  }
+
+  // display the groups' IDs and their students' names
+  displayGroupNameList(selectedGroups) {
+    const groups = this.ESLgroups.filter((group) =>
+      selectedGroups.includes(group.id)
+    );
+    groups.forEach((group) => {
+      console.log(group.id);
+      console.log(group.nameList);
+    });
+  }
+
+  // diplay one teacher's groups
+  displaySelectedTeacher(selectedTeacher = 'Xavier') {
+    // prettier-ignore
+    const possibleGroups = this.ESLteachers
+    .filter((teacher) => teacher.firstName === selectedTeacher)[0]
+    .groupList;
+
+    console.log(possibleGroups);
+    this.displayGroupNameList(possibleGroups);
   }
 }
 
