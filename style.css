@@ -64,6 +64,12 @@ body {
   height: 100vh;
 }
 
+/* SECTION STYLING */
+.section {
+  padding: 2rem;
+  margin: 4rem 6rem;
+}
+
 /* HEADER STYLING */
 .header {
   display: flex;
@@ -84,8 +90,6 @@ body {
 .section-hero {
   color: var(--color-gray);
   font-size: 3rem;
-  padding: 2rem;
-  margin: 4rem 6rem;
 }
 .hero {
   display: grid;
@@ -129,4 +133,28 @@ body {
 .hero img {
   width: 60%;
   border-radius: 13px;
+}
+
+/* TEACHER SECTION STYLING */
+.section-teachers {
+}
+.teacher-header {
+}
+.teacher-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.teacher-card {
+  width: 20rem;
+  height: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.teacher-name {
+  font-size: 3.2rem;
+  grid-column: 1/-1;
+}
+.teacher-group {
+  font-size: 2rem;
 }
