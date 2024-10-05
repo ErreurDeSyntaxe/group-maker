@@ -65,12 +65,19 @@ body {
 }
 
 /* HEADER STYLING */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  padding: 3rem 6rem;
+}
+.header-logo {
+  height: 10rem;
+  stroke: var(--color-true-gray);
+}
 .header-title {
-  color: var(--color-gray);
-  font-size: 6.2rem;
-  font-weight: 900;
-  text-align: center;
-  margin: 3rem 0;
+  font-size: 2rem;
 }
 
 /* HERO STYLING */
@@ -112,7 +119,7 @@ body {
 }
 .btn:hover,
 .btn:active {
-  color: var(--color-true-gray);
+  color: var(--color-gray);
   text-decoration: underline;
 }
 .hero-img-box {
