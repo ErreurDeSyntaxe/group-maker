@@ -226,7 +226,7 @@ class App {
         ''
       );
 
-    document.querySelector('.section-teachers').innerHTML = teachersHTML;
+    document.querySelector('.teacher-card-container').innerHTML = teachersHTML;
   }
 
   // Display the teachers' group on their respective cards
@@ -236,15 +236,6 @@ class App {
         `.teacher-${group.teacherName.toLowerCase()}`
       ).innerHTML += `<div class="teacher-group">${group.id}</div>`;
     });
-  }
-
-  // displays all teacher names
-  displayTeacherNames() {
-    //prettier-ignore
-    const teacherHTML = this.ESLteachers
-      .map((teacher) => teacher.firstName)
-      .reduce((accu, pseudo) => accu + `<div>${pseudo}</div>`, '');
-    // document.querySelector('.section-teachers').innerHTML = teacherHTML;
   }
 }
 
