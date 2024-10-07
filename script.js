@@ -531,15 +531,24 @@ class App {
         if (e.target.classList.contains('teacher-group'))
           this.displayNames(e);
       });
+
+    document
+      .querySelector('.gen-btn-container')
+      .addEventListener('click', (e) => {
+        if (e.target.classList.contains('gen-btn-size')) {
+          if (this.desiredGroup === undefined) return;
+          this.generateTeams(this.desiredGroup, e.target.textContent);
+        }
+      });
   }
 
   // displays students' names in the generate section
   displayNames(e) {
-    document.getElementById('generate').scrollIntoView();
+    setTimeout(() => document.getElementById('generate').scrollIntoView(), 250);
     // find the group
-    const desiredGroup = this.getGroup(this.ESLgroups, e.target.textContent);
+    this.desiredGroup = this.getGroup(this.ESLgroups, e.target.textContent);
     // build the DOM with the students' names
-    const namesHTML = desiredGroup.nameList.reduce(
+    const namesHTML = this.desiredGroup.nameList.reduce(
       (accu, student) => accu + `<div class="gen-name">${student}</div>`,
       ''
     );
