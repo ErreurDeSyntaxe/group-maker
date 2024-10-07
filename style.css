@@ -133,11 +133,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  align-items: center;
   gap: 2rem;
 }
 .teacher-card {
-  width: 20rem;
-  height: 20rem;
+  min-width: 20rem;
+  /* min-height: 20rem; */
   padding: 1rem;
   text-align: center;
   border: 3px solid currentColor;
@@ -157,7 +158,11 @@ body {
   border: 2px solid currentColor;
   border-radius: 5px;
   width: 80%;
+  padding: 1rem 2rem;
 
+  display: none;
+}
+.t-group-active > .teacher-group {
   display: flex;
   justify-content: center;
   align-items: center;
