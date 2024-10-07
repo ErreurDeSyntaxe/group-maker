@@ -558,7 +558,9 @@ class App {
   // displays randomly generated teams
   displayTeams(teams) {
     const teamHTML = teams.reduce(
-      (accu, team) => accu + `<div class="team-card">${team.join(' & ')}</div>`,
+      (accu, team, index) =>
+        accu +
+        `<div class="team-card">${index + 1}: ${team.join(`<br> & `)}</div>`,
       ''
     );
     document.querySelector('.generate-teams').innerHTML = teamHTML;
