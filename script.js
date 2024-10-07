@@ -516,22 +516,24 @@ class App {
 
     this.displayTeacherCards(this.ESLteachers);
     this.displayGroupCards(this.ESLgroups);
+    this.removedNames = [];
     this.attachHandlers();
-    // this.generateTeams(this.ESLgroups[0], 3);
   }
 
   // attach event handlers
   attachHandlers() {
+    // a group has been selected for random team generation
     document
       .querySelector('.teacher-card-container')
       .addEventListener('click', (e) => {
-        if (e.target.classList.contains('teacher-card'))
-          e.target.classList.toggle('teacher-active');
         // prettier-ignore
-        if (e.target.classList.contains('teacher-group'))
+        if (e.target.classList.contains('teacher-group')) {
           this.displayNames(e);
+          document.querySelector('.generate-teams').textContent = '';
+        }
       });
 
+    // a team size (1 to 4) has been selected
     document
       .querySelector('.gen-btn-container')
       .addEventListener('click', (e) => {
@@ -540,12 +542,18 @@ class App {
           this.generateTeams(this.desiredGroup, e.target.textContent);
         }
       });
+
+    // students are removed from the team generation process
+    document
+      .querySelector('.generate-names')
+      .addEventListener('click', (e) => this.handleRemoval(e));
   }
 
   // displays students' names in the generate section
   displayNames(e) {
     setTimeout(() => document.getElementById('generate').scrollIntoView(), 250);
     // find the group
+    this.removedNames = [];
     this.desiredGroup = this.getGroup(this.ESLgroups, e.target.textContent);
     // build the DOM with the students' names
     const namesHTML = this.desiredGroup.nameList.reduce(
@@ -576,6 +584,21 @@ class App {
     return Math.floor(Math.random() * length);
   }
 
+  handleRemoval(e) {
+    if (!e.target.classList.contains('gen-name')) return;
+
+    if (e.target.classList.contains('removed'))
+      this.removedNames.splice(
+        this.removedNames.indexOf(e.target.textContent),
+        1
+      );
+
+    if (!e.target.classList.contains('removed'))
+      this.removedNames.push(e.target.textContent);
+
+    e.target.classList.toggle('removed');
+  }
+
   // make groups of custom size
   generateTeams(group, size) {
     console.log(
@@ -586,6 +609,12 @@ class App {
     const teams = [];
     console.log(copy);
 
+    // removes names from team generation process
+    this.removedNames.forEach((student) =>
+      copy.splice(copy.indexOf(student), 1)
+    );
+
+    // makes teams until there are no students left
     while (copy.length > 0) {
       const team = [];
       for (let i = 0; i < size; i++) {
