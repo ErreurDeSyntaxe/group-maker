@@ -67,7 +67,12 @@ body {
 
 /* SECTION STYLING */
 .section {
-  padding: 12rem;
+  padding: 4rem;
+}
+.section-heading {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  /* padding: 4rem 0; */
 }
 
 /* HEADER STYLING */
@@ -76,7 +81,7 @@ body {
   align-items: center;
   gap: 3.2rem;
 
-  padding: 3rem 6rem;
+  padding: 2rem 6rem;
 }
 .header-logo {
   height: 10rem;
@@ -87,8 +92,6 @@ body {
 }
 
 /* HERO STYLING */
-.section-hero {
-}
 .hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -103,8 +106,7 @@ body {
 }
 .hero-description {
   padding: 0 4rem;
-}
-.hero-link-box {
+  font-size: 1.4rem;
 }
 .btn:link,
 .btn:visited {
@@ -129,17 +131,21 @@ body {
 
 /* TEACHER SECTION STYLING */
 .section-teachers {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 .teacher-card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
 }
 .teacher-card {
-  min-width: 20rem;
+  /* min-width: 20rem; */
   /* min-height: 20rem; */
+  width: 100%;
   padding: 1rem;
   text-align: center;
   border: 3px solid currentColor;
@@ -150,12 +156,7 @@ body {
   gap: 1rem;
   justify-items: center;
 
-  cursor: pointer;
   transition: all 300ms;
-}
-.teacher-card:hover {
-  border-color: var(--color-gray);
-  color: var(--color-gray);
 }
 .teacher-name {
   font-size: 3.2rem;
@@ -170,9 +171,6 @@ body {
   padding: 1rem 2rem;
   background-color: transparent;
 
-  display: none;
-}
-.teacher-active > .teacher-group {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,9 +178,10 @@ body {
 
   transition: all 300ms;
 }
-.teacher-active > .teacher-group:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+.teacher-group:hover {
+  border-color: var(--color-gray);
+  background-color: var(--color-gray);
+  color: var(--color-main);
 }
 /* GENERATE SECTION STYLING */
 .section-generate {
@@ -244,4 +243,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* FOOTER STYLING */
+.footer {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.2rem 0;
+}
+.footer-link:link,
+.footer-link:visited {
+  color: var(--color-support);
+  text-decoration: none;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: var(--color-accent);
+  text-decoration: underline;
 }
