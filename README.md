@@ -51,11 +51,11 @@ in class for presentations or teamwork.
     - [x] Teachers
     - [x] Teachers' Classes
   - [x] Console-Based Logic
+  - [ ] Remove Inidivdual Students
   - [ ] UI Features
     - [x] UI Sketch
-    - [ ] Overall Layout
+    - [x] Overall Layout
     - [ ] Individual Section Layout
-    - [ ] Menu
   - [ ] Responsive Design
     - [ ] Media Queries
     - [ ] Mobile Menu
