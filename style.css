@@ -47,6 +47,7 @@ shades:
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 :root {
   --color-true-gray: #555;
@@ -66,7 +67,7 @@ body {
 
 /* SECTION STYLING */
 .section {
-  padding: 2rem;
+  padding: 12rem;
 }
 
 /* HEADER STYLING */
@@ -148,6 +149,13 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   justify-items: center;
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+.teacher-card:hover {
+  border-color: var(--color-gray);
+  color: var(--color-gray);
 }
 .teacher-name {
   font-size: 3.2rem;
@@ -155,16 +163,28 @@ body {
 }
 .teacher-group {
   font-size: 2rem;
-  border: 2px solid currentColor;
+  border: 3px solid currentColor;
   border-radius: 5px;
   width: 80%;
   padding: 1rem 2rem;
 
   display: none;
 }
-.t-group-active > .teacher-group {
+.teacher-active > .teacher-group {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  transition: all 300ms;
+}
+.teacher-active > .teacher-group:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+/* GENERATE SECTION STYLING */
+.generate-names {
+  width: 80%;
+  height: 50vh;
+  background-color: white;
 }
