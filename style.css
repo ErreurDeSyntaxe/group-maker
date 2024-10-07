@@ -197,6 +197,28 @@ body {
   justify-content: space-around;
   gap: 2rem;
 }
+.gen-btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+.gen-btn-size {
+  width: 10rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: var(--color-main);
+  border: 3px solid var(--color-gray);
+  background-color: var(--color-gray);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+.gen-btn-size:hover {
+  border-color: var(--color-support);
+  background-color: var(--color-support);
+}
 .generate-names,
 .generate-teams {
   padding: 1rem;
