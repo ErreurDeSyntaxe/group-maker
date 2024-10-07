@@ -508,9 +508,9 @@ class App {
     ];
 
     this.ESLteachers = [
-      new Teacher('AJ', '7AA', '8CA'),
-      new Teacher('Mbali', '7FB', '8FB'),
-      new Teacher('Rachel', '7BB', '7CA', '8BB'),
+      new Teacher('AJ', '7AA', '7DB', '7EA', '8CA', '8DB', '8EB'),
+      new Teacher('Mbali', '7BA', '7DA', '7FB', '8AA', '8DA', '8FB'),
+      new Teacher('Rachel', '7BB', '7CA', '7EB', '8Ba', '8BB', '8EA'),
       new Teacher('Xavier', '7AB', '7CB', '7FA', '8CB', '8BA', '8FA'),
     ];
 
