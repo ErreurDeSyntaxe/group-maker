@@ -221,7 +221,7 @@ class App {
         'Alvin',
         'Eric',
         'Aryrton',
-        'Darran',
+        'Darren',
         'Mia',
         'Abby',
         'Sunny',
@@ -516,7 +516,37 @@ class App {
 
     this.displayTeacherCards(this.ESLteachers);
     this.displayGroupCards(this.ESLgroups);
-    this.generateTeams(this.ESLgroups[0], 3);
+    this.attachHandlers();
+    // this.generateTeams(this.ESLgroups[0], 3);
+  }
+
+  // attach event handlers
+  attachHandlers() {
+    document
+      .querySelector('.teacher-card-container')
+      .addEventListener('click', (e) => {
+        if (e.target.classList.contains('teacher-card'))
+          e.target.classList.toggle('teacher-active');
+        if (e.target.classList.contains('teacher-group')) {
+          document.getElementById('generate').scrollIntoView();
+          // find the group
+          const desiredGroup = this.getGroup(
+            this.ESLgroups,
+            e.target.textContent
+          );
+          // build the DOM with the students' names
+          const namesHTML = desiredGroup.nameList.reduce(
+            (accu, student) => accu + `<div class="gen-name">${student}</div>`,
+            ''
+          );
+          document.querySelector('.generate-names').innerHTML = namesHTML;
+        }
+      });
+  }
+
+  // returns the group that matches the id clicked by the user
+  getGroup(groupList, id) {
+    return groupList.find((group) => group.id === id);
   }
 
   // returns a random student number from the nameList
