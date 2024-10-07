@@ -563,6 +563,33 @@ class App {
 
     this.displayTeacherCards(this.ESLteachers);
     this.displayGroupCards(this.ESLgroups);
+    this.generateTeams(this.ESLgroups[0], 3);
+  }
+
+  // returns a random student number from the nameList
+  randomStudent(length) {
+    return Math.floor(Math.random() * length);
+  }
+
+  // make groups of custom size
+  generateTeams(group, size) {
+    console.log(
+      `${group.teacherName} requested teams of ${size} students for group ${group.id}`
+    );
+
+    const copy = [...group.nameList];
+    const teams = [];
+    console.log(copy);
+
+    while (copy.length > 0) {
+      const team = [];
+      for (let i = 0; i < size; i++) {
+        const [student] = copy.splice(this.randomStudent(copy.length), 1);
+        team.push(student);
+      }
+      teams.push(team);
+    }
+    console.table(teams);
   }
 
   // Display teachers' names on the UI
