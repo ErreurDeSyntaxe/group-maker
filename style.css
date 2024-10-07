@@ -234,4 +234,14 @@ body {
 }
 .generate-teams {
   flex-grow: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.team-card {
+  background-color: var(--color-support);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
