@@ -132,7 +132,7 @@ class App {
         'Ruby',
         'Gordon',
         'Una',
-        'Meghan',
+        'Megan',
         'Leo',
         'Ray',
       ]),
