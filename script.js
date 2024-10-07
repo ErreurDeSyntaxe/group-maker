@@ -527,21 +527,23 @@ class App {
       .addEventListener('click', (e) => {
         if (e.target.classList.contains('teacher-card'))
           e.target.classList.toggle('teacher-active');
-        if (e.target.classList.contains('teacher-group')) {
-          document.getElementById('generate').scrollIntoView();
-          // find the group
-          const desiredGroup = this.getGroup(
-            this.ESLgroups,
-            e.target.textContent
-          );
-          // build the DOM with the students' names
-          const namesHTML = desiredGroup.nameList.reduce(
-            (accu, student) => accu + `<div class="gen-name">${student}</div>`,
-            ''
-          );
-          document.querySelector('.generate-names').innerHTML = namesHTML;
-        }
+        // prettier-ignore
+        if (e.target.classList.contains('teacher-group'))
+          this.displayNames(e);
       });
+  }
+
+  // displays students' names in the generate section
+  displayNames(e) {
+    document.getElementById('generate').scrollIntoView();
+    // find the group
+    const desiredGroup = this.getGroup(this.ESLgroups, e.target.textContent);
+    // build the DOM with the students' names
+    const namesHTML = desiredGroup.nameList.reduce(
+      (accu, student) => accu + `<div class="gen-name">${student}</div>`,
+      ''
+    );
+    document.querySelector('.generate-names').innerHTML = namesHTML;
   }
 
   // returns the group that matches the id clicked by the user
@@ -596,7 +598,7 @@ class App {
     groups.forEach((group) => {
       document.querySelector(
         `.teacher-${group.teacherName.toLowerCase()}`
-      ).innerHTML += `<div class="teacher-group">${group.id}</div>`;
+      ).innerHTML += `<button class="teacher-group">${group.id}</button>`;
     });
   }
 }
