@@ -231,6 +231,15 @@ body {
 }
 .generate-names {
 }
+.gen-name {
+  cursor: pointer;
+}
+.gen-name:hover {
+  color: var(--color-support);
+}
+.removed {
+  color: var(--color-support);
+}
 .generate-teams {
   flex-grow: 1;
 
