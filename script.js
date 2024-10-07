@@ -555,6 +555,15 @@ class App {
     document.querySelector('.generate-names').innerHTML = namesHTML;
   }
 
+  // displays randomly generated teams
+  displayTeams(teams) {
+    const teamHTML = teams.reduce(
+      (accu, team) => accu + `<div class="team-card">${team.join(' & ')}</div>`,
+      ''
+    );
+    document.querySelector('.generate-teams').innerHTML = teamHTML;
+  }
+
   // returns the group that matches the id clicked by the user
   getGroup(groupList, id) {
     return groupList.find((group) => group.id === id);
@@ -584,6 +593,7 @@ class App {
       teams.push(team);
     }
     console.table(teams);
+    this.displayTeams(teams);
   }
 
   // Display teachers' names on the UI
