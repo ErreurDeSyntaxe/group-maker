@@ -46,13 +46,13 @@ in class for presentations or teamwork.
   - [ ] UI Design
   - [ ] Responsive Design
 - [ ] Development
-  - [ ] Basic HTML
-  - [ ] Name Lists
-    - [ ] Teachers
-    - [ ] Teachers' Classes
-  - [ ] Console-Based Logic
+  - [x] Basic HTML
+  - [x] Name Lists
+    - [x] Teachers
+    - [x] Teachers' Classes
+  - [x] Console-Based Logic
   - [ ] UI Features
-    - [ ] UI Sketch
+    - [x] UI Sketch
     - [ ] Overall Layout
     - [ ] Individual Section Layout
     - [ ] Menu
