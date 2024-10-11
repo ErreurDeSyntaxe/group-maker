@@ -98,7 +98,7 @@ class App {
       new Group('Xavier', '7FA', [
         'Abby',
         'Patty',
-        'Clair',
+        'Claire',
         'Jessica',
         'Willson',
         'Ben',
