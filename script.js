@@ -132,6 +132,7 @@ class App {
         'Wayne',
         'Jason',
         'Isaac',
+        'Kiki',
         'Ruby',
         'Gordon',
         'Una',
