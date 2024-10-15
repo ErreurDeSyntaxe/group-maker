@@ -1,33 +1,30 @@
 # Group Maker
 
-A template for practice or simple projects (without webpack or ESlint)
+A simple website to generate random groups in class.
 
 ## About the Project
 
 ### Preview
 
 <div align='center'>
-    <img src='./README/project-preview.png'>
+    <img src='./README/project-preview.jpg'>
 </div>
 
 ### Live
 
-<a href='http://google.com/'>Google</a>
+<a href='https://erreurdesyntaxe.github.io/group-maker/'>Group Maker</a>
 
 ### Objective
 
 The goal of the project is to build a quick and easy way to make random groups
 in class for presentations or teamwork.
 
-###### Project Statement
-
-<a href='http://theodinproject.com/'>The Odin Project</a> (Month Year)
-
 ### Notable Features
 
 - Select a class (7AA, 7CB, 8DA, 8FB...)
 - Select group size
 - Visually group the students together
+- Remove/Re-add student to the group making pool
 
 ## Built With
 
@@ -43,7 +40,7 @@ in class for presentations or teamwork.
   - [x] Features
   - [x] Flowchart
   - [x] Architecture
-  - [ ] UI Design
+  - [x] UI Design
   - [ ] Responsive Design
 - [ ] Development
   - [x] Basic HTML
@@ -51,11 +48,11 @@ in class for presentations or teamwork.
     - [x] Teachers
     - [x] Teachers' Classes
   - [x] Console-Based Logic
-  - [ ] Remove Inidivdual Students
-  - [ ] UI Features
+  - [x] Remove Inidividual Students
+  - [x] UI Features
     - [x] UI Sketch
     - [x] Overall Layout
-    - [ ] Individual Section Layout
+    - [x] Individual Section Layout
   - [ ] Responsive Design
     - [ ] Media Queries
     - [ ] Mobile Menu
