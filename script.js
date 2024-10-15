@@ -251,7 +251,6 @@ class App {
         'Ryan',
         'Andrew',
         'Sofia',
-        'Mandy',
         'Zoe',
         'Jamie',
         'Zachary',
