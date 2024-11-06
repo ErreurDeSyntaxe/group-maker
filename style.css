@@ -229,8 +229,6 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
-.generate-names {
-}
 .gen-name {
   cursor: pointer;
 }

@@ -1,8 +1,20 @@
 /* In media queries, 1rem = 1em = 16px */
 
-/**************************/
-/* BELOW 1344px */
-/**************************/
-
-@media (max-width: 84em) {
+/* BELOW 592px */
+@media (max-width: 37em) {
+  html {
+    font-size: 50%;
+  }
+  .teacher-card-container {
+    gap: 1rem;
+  }
+  .teacher-group {
+    width: 60%;
+  }
+  .gen-name {
+    font-size: 2rem;
+  }
+  .team-card {
+    font-size: 2rem;
+  }
 }
