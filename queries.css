@@ -5,6 +5,12 @@
   html {
     font-size: 50%;
   }
+
+  .section-heading {
+    font-size: 3rem;
+    text-align: center;
+  }
+
   .teacher-card-container {
     gap: 1rem;
   }
