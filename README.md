@@ -28,21 +28,21 @@ in class for presentations or teamwork.
 
 ## Built With
 
-<img src='./README/html5-logo.svg' style='width:40px; height: 40px' >
-<img src='./README/css3-logo.svg' style='width:40px; height: 40px' >
-<img src='./README/javascript-logo.svg' style='width:40px; height: 40px' >
+<img src='./README/html-logo.svg' style='width:40px; height: 40px' >
+<img src='./README/css-logo.svg' style='width:40px; height: 40px' >
+<img src='./README/js-logo.svg' style='width:40px; height: 40px' >
 
 ## To-Do
 
 - [x] Understand the objectives
-- [ ] Plan
+- [x] Plan
   - [x] User stories
   - [x] Features
   - [x] Flowchart
   - [x] Architecture
   - [x] UI Design
-  - [ ] Responsive Design
-- [ ] Development
+  - [x] Responsive Design
+- [x] Development
   - [x] Basic HTML
   - [x] Name Lists
     - [x] Teachers
@@ -53,12 +53,7 @@ in class for presentations or teamwork.
     - [x] UI Sketch
     - [x] Overall Layout
     - [x] Individual Section Layout
-  - [ ] Responsive Design
-    - [ ] Media Queries
-    - [ ] Mobile Menu
-  - [ ] Check Accessibility
-- [ ] Fix bugs
-  - [ ] No bugs yet!
+  - [x] Responsive Design
 
 ## User Stories
 
