@@ -2,13 +2,13 @@
   "groups": [
     {
       "groupName": "7DA",
-      "names": [
+      "studentNames": [
         "Ariel L",
         "Jimmy C",
         "Kelly",
         "Wayne",
         "Leann",
-        "Gene",
+        "Genie",
         "Minnie",
         "Felix",
         "Nini",
@@ -28,11 +28,11 @@
     },
     {
       "groupName": "7EA",
-      "names": [
+      "studentNames": [
         "Shawn",
         "Felix",
         "Amber",
-        "Stephen Wu",
+        "Stephen",
         "Amelie",
         "Duke",
         "Hank",
@@ -40,7 +40,7 @@
         "Mark",
         "Alisa",
         "Ginny",
-        "Steven Lin",
+        "Steven",
         "Randy",
         "Patrick",
         "Dora",
@@ -53,7 +53,7 @@
     },
     {
       "groupName": "8AA",
-      "names": [
+      "studentNames": [
         "Amber",
         "Bella",
         "Tina",
@@ -78,7 +78,7 @@
     },
     {
       "groupName": "8CA",
-      "names": [
+      "studentNames": [
         "Henry",
         "Terry",
         "Lana",
@@ -102,7 +102,7 @@
     },
     {
       "groupName": "8DB",
-      "names": [
+      "studentNames": [
         "Kate",
         "Ian",
         "Oliver",
@@ -126,8 +126,8 @@
     },
     {
       "groupName": "8EA",
-      "names": [
-        "Nick",
+      "studentNames": [
+        "Nick 恩",
         "Annie",
         "Vivian",
         "Melody",
@@ -140,7 +140,7 @@
         "Ruby",
         "Jeremy",
         "Brook",
-        "Nick",
+        "Nick 諭",
         "Amber",
         "Dora",
         "Wayne",

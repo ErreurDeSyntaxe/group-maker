@@ -1,0 +1,16 @@
+.group {
+  padding: 2rem 4rem;
+  border: 0.4rem solid currentColor;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.group:hover {
+  color: var(--color-gray);
+}
+
+.group:active {
+  transform: scale(0.95);
+}

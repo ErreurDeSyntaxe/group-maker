@@ -1,0 +1,13 @@
+.groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 3rem;
+
+  color: var(--color-text);
+  font-size: 5rem;
+  padding: 2rem;
+  max-width: fit-content;
+  margin: auto;
+}

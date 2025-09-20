@@ -1,0 +1,23 @@
+.btn {
+  font-size: 2rem;
+  color: var(--color-text);
+  border: 3px solid currentColor;
+  border-radius: 5px;
+
+  padding: 1rem 2rem;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.btn:hover {
+  color: var(--color-gray);
+}
+.btn:active {
+  transform: scale(0.95);
+}

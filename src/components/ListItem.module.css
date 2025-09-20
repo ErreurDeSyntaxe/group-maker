@@ -1,0 +1,20 @@
+.item {
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.item:hover {
+  color: var(--color-text-2);
+}
+
+.item:active {
+  transform: scale(0.95);
+}
+
+/* absentees override hover */
+.item.absent {
+  color: var(--color-gray-2);
+}
+.item.absent:hover {
+  color: var(--color-gray-3);
+}

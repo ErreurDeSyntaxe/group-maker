@@ -1,0 +1,17 @@
+.list {
+  list-style: none;
+  background-color: var(--color-gray);
+
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    color: var(--color-text);
+    font-size: 2rem;
+  }
+}
