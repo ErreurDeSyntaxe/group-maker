@@ -1,37 +1,40 @@
 # Group Maker
 
-A simple website to generate random groups in class. It was remade to use React instead of Vanilla JavaScript.
+A web app for teachers to quickly generate random student groups in class.  
+Originally built in Vanilla JS, now rebuilt with React for a smoother, interactive experience.
 
 ## About the Project
 
 ### Preview
 
-<div align='center'>
-    <img src='./docs/project-preview.jpg'>
-</div>
+![Project Preview](./docs/project-preview.jpg)
 
 ### Live
 
-<a href='https://erreurdesyntaxe.github.io/group-maker/'>Group Maker</a>
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://<erreurdesyntaxe>.github.io/group-maker/)
 
 ### Objective
 
-The goal of the project is to build a quick and easy way to make random groups
-in class for presentations or teamwork.
+Quickly create random student groups for class presentations or teamwork.  
+Teachers can select a class, choose group sizes, visualize groups, and temporarily remove absentees.
 
-### Notable Features
+### Key Features
 
-- Select a class (7AA, 7CB, 8DA, 8FB...)
-- Select group size
-- Visually group the students together
-- Remove/Re-add student to the group making pool
+- Select a class and group size (1–4 students)
+- Visualize the randomly generated groups
+- Remove and re-add students to the grouping pool
+- Reset absentee list at each lesson
+- Regenerate groups on demand
+- Responsive design for all devices
 
 ## Built With
 
-<img src='./docs/html-logo.svg' style='width:40px; height: 40px' >
-<img src='./docs/css-logo.svg' style='width:40px; height: 40px' >
-<img src='./docs/js-logo.svg' style='width:40px; height: 40px' >
-<img src='./docs/react-logo.svg' style='width:40px; height: 40px' >
+## Built With
+
+![HTML](./docs/html-logo.svg) |
+![CSS](./docs/css-logo.svg) |
+![JS](./docs/js-logo.svg) |
+![React](./docs/react-logo.svg) |
 
 ## To-Do
 
@@ -58,50 +61,67 @@ in class for presentations or teamwork.
 
 ## User Stories
 
-- As a teacher, I want to find the class I teach
-- As a teacher, I want to choose the group size (from 1 to 4)
-- As a teacher, I want a visual representation of the groups
-- As a teacher, I want to temporarily remove absentees from the process
-- As a teacher, I want the absentee list to be reset at every lesson
-- As a teacher, I want to go back if I missclicked
-
-## Features
-
-- Teachers can remove individual students from the group-making process
-- Teachers can re-add students to the process
-- Teachers can request a new shuffling of students
+- As a teacher, I want to select the class I teach.
+- As a teacher, I want to choose the group size.
+- As a teacher, I want to see a visual representation of groups.
+- As a teacher, I want to remove or re-add absentees.
+- As a teacher, I want the absentee list reset each lesson.
+- As a teacher, I want a back button to undo misclicks.
 
 ## Flowchart
 
-Page Loads -> "Which class are you teaching?" ->
-Possibility of removing/re-adding students -> Shuffle Button Pressed ->
-Groups are randomly generated and displayed on screen
+Page Loads
+↓
+“Which class are you teaching?”
+↓
+Remove / Re-add students (optional)
+↓
+Shuffle Button Pressed
+↓
+Groups randomly generated & displayed
 
 ## Architecture
 
-(Vanilla JS)
+```javascript
 class Group {
--constructor(number, nameList) {
---this.number = number;
---this.nameList = nameList;
--}
+  constructor(number, nameList) {
+    this.number = number;
+    this.nameList = nameList;
+  }
 }
 
 class Teacher {
--constructor(name, groups) {
---this.name = name;
---this.groups = groups;
--}
+  constructor(name, groups) {
+    this.name = name;
+    this.groups = groups;
+  }
 }
 
-class App {  
--constructor() {  
---this.init();  
--}  
--init() {
--}  
+class App {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    // Initialization logic here
+  }
 }
+
+(React Component Hierarchy)
+
+- App
+  - Header
+  - Footer
+  - Homepage
+  - Generator
+    - NameList
+      - ListItem
+    - Teams
+      - Team
+```
 
 ## Lessons & Difficulties
 
-Pushing to GitHub is very useful, but with Vite, it has become more complicated. The steps are more numerous, and I keep forgetting them.
+- Using GitHub Pages with Vite requires careful handling of base paths and routing.
+- React Context API simplifies state management for student lists.
+- Preplanning folder structure and assets saves time during refactoring.
