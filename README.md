@@ -29,12 +29,10 @@ Teachers can select a class, choose group sizes, visualize groups, and temporari
 
 ## Built With
 
-## Built With
-
-![HTML](./docs/html-logo.svg) |
-![CSS](./docs/css-logo.svg) |
-![JS](./docs/js-logo.svg) |
-![React](./docs/react-logo.svg) |
+<img src="./docs/html-logo.svg" alt="HTML" width="40" height="40">
+<img src="./docs/css-logo.svg" alt="CSS" width="40" height="40">
+<img src="./docs/js-logo.svg" alt="JS" width="40" height="40">
+<img src="./docs/react-logo.svg" alt="React" width="40" height="40">
 
 ## To-Do
 
