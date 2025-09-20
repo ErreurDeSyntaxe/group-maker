@@ -13,7 +13,7 @@ function App() {
     <>
       <Header />
       <NamesProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/group-maker">
           <Routes>
             <Route index element={<Homepage />} />
             <Route path="/generator" element={<Generator />} />
