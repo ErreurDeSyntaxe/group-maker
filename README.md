@@ -7,7 +7,7 @@ A simple website to generate random groups in class. It was remade to use React 
 ### Preview
 
 <div align='center'>
-    <img src='./README/project-preview.jpg'>
+    <img src='./docs/project-preview.jpg'>
 </div>
 
 ### Live
