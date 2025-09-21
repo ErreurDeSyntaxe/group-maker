@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
 import dieIcon from '../assets/dice-outline.svg';
 import styles from './Header.module.css';
+import { useNames } from '../context/NamesContext';
 
 function Header() {
+  const { dispatch } = useNames();
+
   return (
     <header className={styles.header}>
-      <Link to="/" className={styles.link}>
+      <Link
+        to="/"
+        className={styles.link}
+        onClick={() => dispatch({ type: 'reset', payload: null })}
+      >
         <img
           className={styles.dieIcon}
           src={dieIcon}
