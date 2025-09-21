@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import dieIcon from '../assets/dice-outline.svg';
 import styles from './Header.module.css';
-import { useNames } from '../context/NamesContext';
+import { useNames } from '../contexts/NamesContext';
 
 function Header() {
   const { dispatch } = useNames();
