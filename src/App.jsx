@@ -10,19 +10,17 @@ import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
-    <>
-      <Header />
-      <NamesProvider>
-        <BrowserRouter basename="/group-maker">
-          <Routes>
-            <Route index element={<Homepage />} />
-            <Route path="/generator" element={<Generator />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </BrowserRouter>
+    <NamesProvider>
+      <BrowserRouter basename="/group-maker">
+        <Header />
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="/generator" element={<Generator />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
         <Footer />
-      </NamesProvider>
-    </>
+      </BrowserRouter>
+    </NamesProvider>
   );
 }
 
