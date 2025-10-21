@@ -3,12 +3,8 @@ import ListItem from './ListItem';
 import styles from './NameList.module.css';
 
 function NameList() {
-  const { nameLists, currentGroup } = useNames();
+  const { names, currentGroup } = useNames();
   if (currentGroup === null) return;
-
-  const names = nameLists.groups.filter(
-    (group) => group.groupName === currentGroup
-  )[0].studentNames;
 
   return (
     <ul className={styles.list}>
