@@ -1,12 +1,14 @@
 import { createContext, useContext, useReducer } from 'react';
-import nameLists from '../data/nameLists.json';
+import names from '../data/names.json';
 
 const NamesContext = createContext();
 
 const initialState = {
-  nameLists: nameLists,
-  groups: nameLists.groups.map((group) => group.groupName),
+  teachers: Object.keys(names),
+  currentTeacher: null,
   currentGroup: null,
+  names: [],
+  groups: [],
   absentees: [],
   teamSize: null,
 };
@@ -17,7 +19,17 @@ function reducer(state, action) {
       return {
         ...state,
         currentGroup: action.payload,
+        names: state.names[state.groups.indexOf(action.payload)],
       };
+
+    case 'setTeacher':
+      return {
+        ...state,
+        currentTeacher: action.payload,
+        groups: names[action.payload].groups.map((g) => g.groupName),
+        names: names[action.payload].groups.map((g) => g.studentNames),
+      };
+
     case 'toggleAbsentee':
       if (state.absentees.includes(action.payload)) {
         return {
@@ -25,7 +37,10 @@ function reducer(state, action) {
           absentees: state.absentees.filter((name) => name !== action.payload),
         };
       }
-      return { ...state, absentees: [...state.absentees, action.payload] };
+      return {
+        ...state,
+        absentees: [...state.absentees, action.payload],
+      };
 
     case 'setSize':
       return {
@@ -43,17 +58,27 @@ function reducer(state, action) {
 
 function NamesProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { nameLists, groups, currentGroup, absentees, teamSize } = state;
+  const {
+    names,
+    groups,
+    currentGroup,
+    absentees,
+    teamSize,
+    teachers,
+    currentTeacher,
+  } = state;
 
   return (
     <NamesContext.Provider
       value={{
-        nameLists,
+        names,
         groups,
         currentGroup,
         absentees,
         teamSize,
         dispatch,
+        teachers,
+        currentTeacher,
       }}
     >
       {children}
