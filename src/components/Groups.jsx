@@ -1,4 +1,6 @@
 import { useNames } from '../contexts/NamesContext';
+import BackButton from './BackButton';
+
 import Group from './Group';
 import styles from './Groups.module.css';
 
@@ -10,6 +12,7 @@ function Groups() {
       {groups.map((group) => (
         <Group key={group}>{group}</Group>
       ))}
+      <BackButton />
     </div>
   );
 }
