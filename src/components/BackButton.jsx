@@ -9,7 +9,7 @@ function BackButton() {
   return (
     <Button
       onClick={() => {
-        navigate(-1);
+        navigate('/');
         dispatch({ type: 'reset', payload: null });
       }}
       type="back"
