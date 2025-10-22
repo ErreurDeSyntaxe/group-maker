@@ -9,7 +9,9 @@ function Group({ children }) {
 
   return (
     <div
-      className={styles.group}
+      className={`${styles.group} ${
+        children.startsWith('G') ? `${styles.double}` : ''
+      }`}
       onClick={() => {
         dispatch({ type: 'setGroup', payload: children });
         navigate('/generator');

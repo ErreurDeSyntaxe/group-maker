@@ -1,10 +1,17 @@
 .group {
+  text-align: center;
+
   padding: 2rem 4rem;
   border: 0.4rem solid currentColor;
   border-radius: 1rem;
 
   cursor: pointer;
   transition: all 300ms ease;
+}
+
+.double {
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
 .group:hover {
