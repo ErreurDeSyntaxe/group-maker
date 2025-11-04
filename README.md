@@ -33,6 +33,7 @@ Teachers can select a class, choose group sizes, visualize groups, and temporari
 <img src="./docs/css-logo.svg" alt="CSS" width="40" height="40">
 <img src="./docs/js-logo.svg" alt="JS" width="40" height="40">
 <img src="./docs/react-logo.svg" alt="React" width="40" height="40">
+<img src="./docs/vite-logo.svg" alt="React" width="40" height="40">
 
 ## To-Do
 
