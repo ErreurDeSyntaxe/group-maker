@@ -11,7 +11,7 @@ Originally built in Vanilla JS, now rebuilt with React for a smoother, interacti
 
 ### Live
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://<erreurdesyntaxe>.github.io/group-maker/)
+[Group Maker](https://erreurdesyntaxe.github.io/group-maker/ 'live project')
 
 ### Objective
 
